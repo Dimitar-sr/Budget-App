@@ -1,50 +1,4 @@
-/* HOW STUFF WORKS WITH MODULES
-var budgetController = (function() {
- 
-    var x = 23;
-    
-    var add = function(a) {
-        return x + a;
-    };
-    
-    return {
-        publicTest: function(b) {
-            return add(b);
-        }
-    };
-    
-}) ();
 
-
-
-var UIController = (function() {
-    
-    //Some code  
-    
-}) ();
-
-
-
-var controller = (function(budgetCtrl, UICtrl) {
-    
-    var z = budgetCtrl.publicTest(5);
-    
-    return {
-        anotherPublic: function() {
-            console.log(z);
-        }
-    };
-    
-})(budgetController, UIController); 
-
-HOW STUFF WORKS WITH MODULES - ENDS HERE */
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////
 //BUDGET CONTROLLER
 var budgetController = (function() {
  
@@ -79,13 +33,7 @@ var budgetController = (function() {
             sum += cur.value;
         });
         data.totals[type] = sum;
-        /* How the loop above works
-        0
-        [200, 400, 100]
-        sum = 0 + 200
-        sum = 200 + 400
-        sum = 600 + 100 = 700
-        */
+       
     };
     
     var data = {
